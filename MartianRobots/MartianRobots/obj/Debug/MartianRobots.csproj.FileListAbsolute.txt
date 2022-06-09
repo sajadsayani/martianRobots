@@ -1,0 +1,8 @@
+C:\SajadSayani\Source\Repos\martianRobots\MartianRobots\MartianRobots\bin\Debug\MartianRobots.exe.config
+C:\SajadSayani\Source\Repos\martianRobots\MartianRobots\MartianRobots\bin\Debug\MartianRobots.exe
+C:\SajadSayani\Source\Repos\martianRobots\MartianRobots\MartianRobots\bin\Debug\MartianRobots.pdb
+C:\SajadSayani\Source\Repos\martianRobots\MartianRobots\MartianRobots\obj\Debug\MartianRobots.csproj.AssemblyReference.cache
+C:\SajadSayani\Source\Repos\martianRobots\MartianRobots\MartianRobots\obj\Debug\MartianRobots.csproj.SuggestedBindingRedirects.cache
+C:\SajadSayani\Source\Repos\martianRobots\MartianRobots\MartianRobots\obj\Debug\MartianRobots.csproj.CoreCompileInputs.cache
+C:\SajadSayani\Source\Repos\martianRobots\MartianRobots\MartianRobots\obj\Debug\MartianRobots.exe
+C:\SajadSayani\Source\Repos\martianRobots\MartianRobots\MartianRobots\obj\Debug\MartianRobots.pdb
