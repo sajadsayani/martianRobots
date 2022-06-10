@@ -18,9 +18,9 @@
 
 namespace MartianRobots
 {
-    public class Program
+    internal class Program
     {
-        private Robot robot;
+        private static Robot robot;
         private static int tempX = 0;
         private static int tempY;
 
@@ -39,7 +39,7 @@ namespace MartianRobots
 
                     Console.WriteLine(tempX);
                     Console.WriteLine(tempY);
-                    //robot.maxXPoint = tempX; errors here because robot class is not defined yet, it is only created as a null. so pass the points as parameter and initialise in robot class.
+                    //robot.maxXPoint = tempX; robot is not created here because it is null, that's why the error, so pass the max co-rds as parameter to Robot constructor and initialise in there
                     //robot.maxYPoint = tempY;
                 }
                 else
