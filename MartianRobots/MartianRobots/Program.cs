@@ -18,12 +18,55 @@
 
 namespace MartianRobots
 {
-    internal class Program
+    public class Program
     {
+        private Robot robot;
+        private static int tempX = 0;
+        private static int tempY;
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
-            Console.ReadLine();
+            int counter = 1;
+
+            // read the Robot instruction file
+            foreach (string line in System.IO.File.ReadLines(@"C:\RobotInstructions.txt"))
+            {
+                if (counter == 1)
+                {
+                    // set the upper right co-ordinates for the grid. This is line 1
+                    int.TryParse(line.Split(' ')[0], out tempX);
+                    int.TryParse(line.Split(' ')[1], out tempY);
+
+                    Console.WriteLine(tempX);
+                    Console.WriteLine(tempY);
+                    //robot.maxXPoint = tempX; errors here because robot class is not defined yet, it is only created as a null. so pass the points as parameter and initialise in robot class.
+                    //robot.maxYPoint = tempY;
+                }
+                else
+                {
+                    // Using the % modulus operand to determine if the line is even or odd.
+                    // I have made the assumtion that all even lines are the Robot starting position and the odd lines are the Robots movements. After the first line of course.
+                    if (counter % 2 == 0)
+                    {
+                        // set the robot position
+                        robot = new Robot(line);
+                    }
+                    else
+                    {
+                        // Now make the Robot move
+                        robot.FinalDestination(line);
+
+                        Console.WriteLine(robot.x + " " + robot.y + " " + robot.orientatation + " " + robot.lost);
+                    }
+
+
+                }
+
+                counter++;
+            }
+
+            Console.WriteLine("\n \nPress any key to exit");
+            Console.ReadKey();
         }
     }
 }

@@ -7,11 +7,17 @@ namespace MartianRobots
         public int x; // x co-ord of current robot position
         public int y; // y co-ord of current robot position
         public string orientatation; // cardinal direction of current robot position
+        public string lost = null;
+
+        public int minXPoint = 0;
+        public int minYPoint = 0;
+        public int maxXPoint;
+        public int maxYPoint;
 
         public Robot(string location)
         {
-            Int32.TryParse(location.Split(' ')[0], out x);
-            Int32.TryParse(location.Split(' ')[1], out y);
+            int.TryParse(location.Split(' ')[0], out x);
+            int.TryParse(location.Split(' ')[1], out y);
             orientatation = location.Split(' ')[2];
         }
 
@@ -65,15 +71,43 @@ namespace MartianRobots
             {
                 case "N":
                     y++;
+
+                    // Now check to see if the Robot has fallen of the grid
+                    if (y > maxYPoint)
+                    {
+                        lost = "LOST";
+                    }
+
                     break;
                 case "E":
                     x++;
+
+                    // Now check to see if the Robot has fallen of the grid
+                    if (x > maxXPoint)
+                    {
+                        lost = "LOST";
+                    }
+
                     break;
                 case "S":
                     y--;
+
+                    // Now check to see if the Robot has fallen of the grid
+                    if (y < minYPoint)
+                    {
+                        lost = "LOST";
+                    }
+
                     break;
                 case "W":
                     x--;
+
+                    // Now check to see if the Robot has fallen of the grid
+                    if (x < minXPoint)
+                    {
+                        lost = "LOST";
+                    }
+
                     break;
                 default:
                     throw new ArgumentException();
