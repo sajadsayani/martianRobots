@@ -20,13 +20,13 @@ namespace MartianRobots
 {
     internal class Program
     {
-        private static Robot robot;
-        private static int tempX = 0;
-        private static int tempY;
-
         static void Main(string[] args)
         {
             int counter = 1;
+            string upperRightCoords = null;
+            Robot robot = null;
+            
+            //int previousRobotLostPoint = 0;
 
             // read the Robot instruction file
             foreach (string line in System.IO.File.ReadLines(@"C:\RobotInstructions.txt"))
@@ -34,13 +34,7 @@ namespace MartianRobots
                 if (counter == 1)
                 {
                     // set the upper right co-ordinates for the grid. This is line 1
-                    int.TryParse(line.Split(' ')[0], out tempX);
-                    int.TryParse(line.Split(' ')[1], out tempY);
-
-                    Console.WriteLine(tempX);
-                    Console.WriteLine(tempY);
-                    //robot.maxXPoint = tempX; robot is not created here because it is null, that's why the error, so pass the max co-rds as parameter to Robot constructor and initialise in there
-                    //robot.maxYPoint = tempY;
+                    upperRightCoords = line;
                 }
                 else
                 {
@@ -49,7 +43,11 @@ namespace MartianRobots
                     if (counter % 2 == 0)
                     {
                         // set the robot position
-                        robot = new Robot(line);
+                        robot = new Robot(upperRightCoords, line);
+
+
+                        // Ran out of time to work out the logic for the "off" world condition, can come back to it later
+                        //robot.YPointLostScent = previousRobotLostPoint;
                     }
                     else
                     {
@@ -59,7 +57,12 @@ namespace MartianRobots
                         Console.WriteLine(robot.x + " " + robot.y + " " + robot.orientatation + " " + robot.lost);
                     }
 
-
+                    // Ran out of time to work out the logic for the "off" world condition, can come back to it later
+                    //if (robot.lost!= null)
+                    //{
+                        //previousRobotLostPoint = robot.YPointLostScent;
+                    //}
+                    robot.lost = null;
                 }
 
                 counter++;

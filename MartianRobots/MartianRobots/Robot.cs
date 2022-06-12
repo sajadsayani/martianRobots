@@ -14,8 +14,16 @@ namespace MartianRobots
         public int maxXPoint;
         public int maxYPoint;
 
-        public Robot(string location)
+        public int XPointLostScent;
+        public int YPointLostScent;
+
+        public Robot(string maxGridCoords, string location)
         {
+            // Upper Right Co-ordinates for the grid
+            int.TryParse(maxGridCoords.Split(' ')[0], out maxXPoint);
+            int.TryParse(maxGridCoords.Split(' ')[1], out maxYPoint);
+
+            // starting position of Robot
             int.TryParse(location.Split(' ')[0], out x);
             int.TryParse(location.Split(' ')[1], out y);
             orientatation = location.Split(' ')[2];
@@ -72,10 +80,13 @@ namespace MartianRobots
                 case "N":
                     y++;
 
+                    // Ran out of time to work out the logic for the "off" world condition, can come back to it later, commented second part of condition
                     // Now check to see if the Robot has fallen of the grid
-                    if (y > maxYPoint)
+                    if (y > maxYPoint /*&& y != YPointLostScent && YPointLostScent != 0*/)
                     {
                         lost = "LOST";
+                        YPointLostScent = y;
+
                     }
 
                     break;

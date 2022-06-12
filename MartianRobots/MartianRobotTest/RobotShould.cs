@@ -8,7 +8,7 @@ namespace MartianRobotTest
         public void SpinLeft()
         {
             //arrange
-            Robot robot = new Robot("1 1 E");
+            Robot robot = new Robot("5 3", "1 1 E");
 
             //act
             robot.SpinLeft();
@@ -21,7 +21,7 @@ namespace MartianRobotTest
         public void SpinRight()
         {
             //arrange
-            Robot robot = new Robot("1 1 E");
+            Robot robot = new Robot("5 3", "1 1 E");
 
             //act
             robot.SpinRight();
@@ -34,7 +34,7 @@ namespace MartianRobotTest
         public void StepForward()
         {
             //arrange
-            Robot robot = new Robot("1 1 E");
+            Robot robot = new Robot("5 3", "1 1 E");
 
             //act
             robot.StepForward();
@@ -47,7 +47,7 @@ namespace MartianRobotTest
         public void FinalPosition()
         {
             //arrange
-            Robot robot = new Robot("1 1 E");
+            Robot robot = new Robot("5 3", "1 1 E");
 
             //act
             robot.FinalDestination("RFRFRFRF");
