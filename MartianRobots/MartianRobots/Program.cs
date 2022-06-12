@@ -29,7 +29,7 @@ namespace MartianRobots
             //int previousRobotLostPoint = 0;
 
             // read the Robot instruction file
-            foreach (string line in System.IO.File.ReadLines(@"C:\RobotInstructions.txt"))
+            foreach (string line in System.IO.File.ReadLines(@"\RobotInstructions.txt"))
             {
                 if (counter == 1)
                 {
