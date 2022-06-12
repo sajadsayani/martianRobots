@@ -20,13 +20,11 @@ orientation and maintains the same orientation.
 ### Installing
 
 * Download the "MartianRobots.exe", located in "martianRobots/MartianRobots/MartianRobots/bin/Debug/" to a location on your machine.
-* Download the following Robot Instruction file "RobotInstructions.txt" located in 
-* Any modifications needed to be made to files/folders
+* Download the following Robot Instruction file "RobotInstructions.txt" located in martianRobots/MartianRobots/MartianRobots/ to your local C: drive root.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* Double click on the "MartiansRobot.exe" from the location where it was downloaded on your machine.
 ```
 code blocks for commands
 ```
