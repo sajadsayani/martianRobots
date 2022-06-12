@@ -38,7 +38,7 @@ Input file to make the output 2 3 S.
 
 * 0.7
   *	Made a change to the input file
-  * See [commit change]()
+  * See [commit history()
 * 0.6
   * Checked in a working version, without the final piece of ignoring the "off" world rule
 * 0.5
