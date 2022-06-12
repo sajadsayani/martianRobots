@@ -39,7 +39,7 @@ been 2 4 S.  I have added the extra move Forward in my Input file to make the ou
 
 * 0.7
   *	Made a change to the input file
-  * See [commit history()
+  * See [commit history]()
 * 0.6
   * Checked in a working version, without the final piece of ignoring the "off" world rule
 * 0.5
