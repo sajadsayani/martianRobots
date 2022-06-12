@@ -19,7 +19,8 @@ orientation and maintains the same orientation.
 
 ### Installing
 
-* Download the "MartianRobots.exe", located in the GitHub 
+* Download the "MartianRobots.exe", located in "martianRobots/MartianRobots/MartianRobots/bin/Debug/" to a location on your machine.
+* Download the following Robot Instruction file "RobotInstructions.txt" located in 
 * Any modifications needed to be made to files/folders
 
 ### Executing program
