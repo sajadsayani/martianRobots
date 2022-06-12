@@ -17,14 +17,9 @@ orientation and maintains the same orientation.
 
 ## Getting Started
 
-### Dependencies
-
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-
 ### Installing
 
-* How/where to download your program
+* Download the "MartianRobots.exe", located in the GitHub 
 * Any modifications needed to be made to files/folders
 
 ### Executing program
